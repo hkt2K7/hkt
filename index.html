@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="french">
+
+<head>
+    <meta charset="utf-8">
+    <meta name='description' content='A simple startpage, suited to my needs.' />
+    <meta name='Hiba' content='lifestyle' />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>~Sanrio~</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="startTime()">
+
+    <script>
+    function startTime() {
+        var today = new Date();
+        var hr = today.getHours();
+        var min = today.getMinutes();
+		var sec = today.getSeconds();
+       
+        // ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+        // hr = (hr == 0) ? 12 : hr;
+        // hr = (hr > 12) ? hr - 12 : hr;
+        hr = checkTime(hr);
+        min = checkTime(min);
+        sec = checkTime(sec);
+        document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec // + " " + ap;
+        
+        var months = ['Januar', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var curWeekDay = days[today.getDay()];
+        var curDay = today.getDate();
+        var curMonth = months[today.getMonth()];
+        var curYear = today.getFullYear();
+        var date = curWeekDay+", "+curDay+" "+curMonth;
+        document.getElementById("date").innerHTML = date;
+        
+        var time = setTimeout(function(){ startTime() }, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    </script>
+
+    <div class="clockdate">
+        <div class="clockdate-wrapper">
+          <div id="date"></div>
+          <div id="clock"></div>
+        </div>
+    </div>
+
+    <br>
+    <div class="search">
+        <form class="ddg textField" action="chrome://newtab/" method="get">
+            <input class="input_box" type="text" name="q" placeholder="" type="input" />
+            <label class="form__label" for="name">🔍   S e a r c h :</label>
+			<p>Maybe you can find here a useful idea -love- <p>
+        </form>
+    <div class="Social media ">
+        <br><br><br><br><br><br>
+        <div class="tools">
+            <h1><span class="c1"> 2K23 </span></h3>
+            <ul>
+                <li><a href='https://fr.aliexpress.com/item/1005005310092656.html?spm=a2g0o.productlist.main.83.1f0648d7hilDOu&algo_pvid=b68f5211-7870-4fc4-804c-b011f86eb8e5&algo_exp_id=b68f5211-7870-4fc4-804c-b011f86eb8e5-41&pdp_npi=3%40dis%21EUR%213.36%212.05%21%21%21%21%21%40211bda9b16823687160514154d076c%2112000032741782541%21sea%21FR%214519171595&curPageLogUid=IQ1Izm7SK4jh' class='button'>Bracelet</a> <a href='https://fr.aliexpress.com/item/1005004655237527.html?spm=a2g0o.cart.0.0.18fa378d8P6kLg&mp=1&gatewayAdapt=glo2fra' class='button'>Pendantif</a> <a href='https://fr.aliexpress.com/item/1005004986689228.html?spm=a2g0o.cart.0.0.18fa378d8P6kLg&mp=1&gatewayAdapt=glo2fra' class='button'>Mirror</a></li>
+                <br>
+                <li><a href='https://fr.aliexpress.com/item/1005004879003449.html?spm=a2g0o.productlist.main.33.1f0648d7hilDOu&algo_pvid=b68f5211-7870-4fc4-804c-b011f86eb8e5&algo_exp_id=b68f5211-7870-4fc4-804c-b011f86eb8e5-16&pdp_npi=3%40dis%21EUR%213.15%210.49%21%21%21%21%21%40211bda9b16823687160514154d076c%2112000030865299537%21sea%21FR%214519171595&curPageLogUid=1GbqyW4Vqj6Q' class='button'>Necklec</a> <a href='https://fr.aliexpress.com/item/1005004685829799.html?spm=a2g0o.productlist.main.43.1f0648d7hilDOu&algo_pvid=b68f5211-7870-4fc4-804c-b011f86eb8e5&algo_exp_id=b68f5211-7870-4fc4-804c-b011f86eb8e5-21&pdp_npi=3%40dis%21EUR%213.59%210.48%21%21%21%21%21%40211bda9b16823687160514154d076c%2112000030095250219%21sea%21FR%214519171595&curPageLogUid=iYrGsmEaRHnn' class='button'>H</a> <a href='https://fr.aliexpress.com/item/1005005074813612.html?spm=a2g0o.cart.0.0.18fa378d8P6kLg&mp=1&gatewayAdapt=glo2fra' class='button'>Earrings</a></li>
+                <br>
+                <li><a href='https://fr.aliexpress.com/item/1005004784485260.html?spm=a2g0o.cart.0.0.18fa378dBW1Qnx&mp=1&gatewayAdapt=glo2fra'class='button'>Porte-clef</a> <a href='https://fr.aliexpress.com/item/1005004745351461.html?spm=a2g0o.productlist.main.21.24f910e5RNErhT&algo_pvid=207f4277-c04a-49d1-90f8-ff0eccb0b940&algo_exp_id=207f4277-c04a-49d1-90f8-ff0eccb0b940-10&pdp_npi=3%40dis%21EUR%218.18%211.73%21%21%21%21%21%40211beeec16823693808517573d075e%2112000030319148674%21sea%21FR%214519171595&curPageLogUid=ItIwQxHzvF54' class='button'>Bottle</a> <a href='https://fr.aliexpress.com/item/1005005376687060.html?spm=a2g0o.productlist.main.27.24f910e5RNErhT&algo_pvid=207f4277-c04a-49d1-90f8-ff0eccb0b940&algo_exp_id=207f4277-c04a-49d1-90f8-ff0eccb0b940-13&pdp_npi=3%40dis%21EUR%213.28%212.46%21%21%21%21%21%40211beeec16823693808517573d075e%2112000032801388137%21sea%21FR%214519171595&curPageLogUid=bVSf4ZN0hZzv' class='button'>For soap</a></li>       
+            </ul>
+			<br />
+        </div>
+
+        <div class="Cook">
+            <h1><span class="c2"> Kitty </span></h3>
+            <ul>
+                <li><a href='https://images.app.goo.gl/6VDowVPTxuYoYep77' class='button'>Pinterest</a> <a href='https://odysee.com' class='button'>Hello</a> <a href='https://images.app.goo.gl/6VDowVPTxuYoYep77' class='button'>Pinterest</a></li>
+                <br>
+                <li><a href='https://boutique-hellokitty.fr/' class='button'>Store1</a> <a href='https://www.sanrio.com/' class='button'>Store2</a> <a href='https://hellokitty-france.com/' class='button'>Hello</a></li>
+                <br>
+                <li><a href='https://e-burgas.com/' class='button'>Hello</a> <a href='https://images.app.goo.gl/6VDowVPTxuYoYep77' class='button'>Pinterest</a> <a href='https://xkcd.com' class='button'>Hello</a></li>
+                <br>
+                
+            </ul>
+			<br />
+	        <br />
+			<br />
+        </div>
+
+        <div class=" Melow">
+            <h1><span class="c3"> Melowdy </span></h3>
+            <ul>
+                <li><a href='https://youtu.be/VC1d1Tm9lKQ' class='button'>Jorge Ben 9</a> <a href='https://youtu.be/BVHA2lHaeqk' class='button'>Jorge Ben 6</a> <a href='https://youtu.be/Ubol9NyLWZc' class='button'>Jorge Ben 4</a></li>
+                <br>
+                <li><a href='https://youtu.be/tyxJYWvQIbY' class='button'>Summer W32</a> <a href='https://youtu.be/BfMb4ivGGaI' class='button'>Summer Wj</a> <a href='https://youtu.be/qFXB45_hQs4' class='button'>Summer Wd</a></li>
+                <br>
+                <li><a href='https://youtu.be/IDbu1RxEw9w' class='button'>Niro Z</a> <a href='https://youtu.be/oDYuMACuJjw' class='button'>Niro gh</a> <a href='https://youtu.be/srIhyoA4Q_w' class='button'>Niro n</a></li>
+                
+            </ul>
+			<br />
+	        <br />
+			<br />
+        </div>
+    </div>
+</body>
+</html>
